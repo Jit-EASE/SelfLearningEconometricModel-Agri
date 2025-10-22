@@ -363,7 +363,7 @@ st.sidebar.subheader("Map Controls")
 county = st.sidebar.selectbox("County", options=COUNTIES, index=COUNTIES.index("Dublin") if "Dublin" in COUNTIES else 0)
 
 st.sidebar.markdown("---")
-st.sidebar.subheader("Decision Agent (GPT‑4o‑mini)")
+st.sidebar.subheader("Decision Agent")
 agent_enabled = st.sidebar.checkbox("Enable AI agent", value=False)
 agent_q = st.sidebar.text_area("Ask a question (e.g., ‘How to adjust rotation if growth drops 15%?’)")
 if agent_enabled and agent_q:

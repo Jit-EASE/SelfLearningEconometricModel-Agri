@@ -54,7 +54,7 @@ except Exception:
     FOLIUM_AVAILABLE = False
 
 # -----------------------------------------------------------------------------
-# Synthetic Demo Data Generators
+# simulated Demo Data Generators
 # -----------------------------------------------------------------------------
 
 np.random.seed(42)
@@ -349,8 +349,8 @@ def rl_recommendation(df: pd.DataFrame):
 # -----------------------------------------------------------------------------
 
 st.set_page_config(page_title="AgriSense-AEI (PastureBase-class)", layout="wide")
-st.title("AgriSense-AEI — Self-Learning Econometric Grassland Decision System")
-st.caption("PBI-class features + RL/Monte Carlo/Markov/SEM/System GMM + NLP explanations + Leaflet map")
+st.title("AgriSense— Self-Learning Econometric Decision System for AgriFood Business Ireland")
+st.caption("Designed by Shubhojit Bagchi")
 
 # Sidebar controls
 st.sidebar.header("Planner Controls")
@@ -408,7 +408,7 @@ else:
     st.caption("County selector lives in the Planner Controls. Marker popup shows the county and estimated KPIs for the selected week.")
 
 with st.expander("ℹ️ Data & Import/Export", expanded=True):
-    st.write("This demo uses synthetic data. Upload CSVs to replace panels/events/herd.")
+    st.write("This demo uses simulated data. Upload CSVs to replace panels/events/herd.")
     c1, c2, c3, c4 = st.columns(4)
     with c1:
         up_panel = st.file_uploader("Panel (paddock×week)", type=["csv"])
@@ -564,7 +564,7 @@ with Tabs[9]:
     grazings = DF_GRAZE.groupby("paddock", as_index=False)["date"].count().rename(columns={"date":"grazings_yr"})
     st.dataframe(grazings)
     peers = tonnage.copy(); peers["farm"] = np.random.choice(["PeerA","PeerB","PeerC"], size=len(peers))
-    st.write("**Peer Benchmark (synthetic)**")
+    st.write("**Peer Benchmark (simulated)**")
     st.dataframe(peers.groupby(["year","farm"], as_index=False)["growth_kgdm_ha"].mean().rename(columns={"growth_kgdm_ha":"avg_tonnage"}))
     st.markdown("**AI note:** " + ai_explain("Use grazings/year and tonnage to rank paddocks; actions for underperformers (reseed, nutrients, drainage)."))
 
@@ -590,4 +590,4 @@ with Tabs[11]:
         """
     )
 
-st.success("AgriSense-AEI ready — upload your farm CSVs or run the synthetic demo. Add OPENAI_API_KEY to enable NLP & Decision Agent.")
+st.success("AgriSense-AEI ready — upload your farm CSVs or run the simulated demo. Add OPENAI_API_KEY to enable NLP & Decision Agent.")

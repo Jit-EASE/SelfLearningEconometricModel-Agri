@@ -384,7 +384,7 @@ if agent_enabled and agent_q:
     st.sidebar.info(ai_explain(prompt))
 
 # --------------------------- FIRST PAGE: MAP ---------------------------------
-st.subheader("Ireland Map — Selected County Marker")
+st.subheader("GeoSpatial Map - Ireland")
 if not FOLIUM_AVAILABLE:
     st.warning("Install map deps: pip install folium streamlit-folium")
 else:

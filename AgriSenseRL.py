@@ -349,7 +349,7 @@ def rl_recommendation(df: pd.DataFrame):
 # -----------------------------------------------------------------------------
 
 st.set_page_config(page_title="AgriSense-AEI (PastureBase-class)", layout="wide")
-st.title("AgriSense— Self-Learning Econometric Decision System for AgriFood Business Ireland")
+st.title("AgriSense— Self-Learning Agri-Food Econometric Decision System - Ireland")
 st.caption("Prototype System designed by Shubhojit Bagchi")
 
 # Sidebar controls

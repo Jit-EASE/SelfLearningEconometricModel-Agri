@@ -1,0 +1,23 @@
+# --- Core UI ---
+streamlit>=1.29
+
+# --- Visualization ---
+plotly>=5.15
+
+# --- Data stack ---
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+
+# --- Econometrics / SEM ---
+statsmodels>=0.14
+linearmodels>=4.26
+semopy>=2.3
+
+# --- Maps (Leaflet in Streamlit) ---
+folium>=0.15
+streamlit-folium>=0.18
+
+# --- NLP explanations / Decision agent ---
+# Using legacy Chat Completions API in the code:
+openai>=0.27.8,<1.0.0
